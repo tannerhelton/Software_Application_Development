@@ -21,11 +21,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-5k-Aiq" userLabel="TextContainer">
                                 <rect key="frame" x="0.0" y="237" width="600" height="363"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eVZ-Gp-qOH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cupertino" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eVZ-Gp-qOH">
                                         <rect key="frame" x="-4" y="0.0" width="608" height="179.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="150"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" misplaced="YES">
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="90"/>
+                                            <rect key="frame" x="-154" y="0.0" width="608" height="179.5"/>
+                                        </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28C" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08z-XP-Cfn">
                                         <rect key="frame" x="77" y="54.5" width="446.5" height="298.5"/>
@@ -40,7 +44,18 @@
                                     <constraint firstAttribute="bottom" secondItem="08z-XP-Cfn" secondAttribute="bottom" constant="10" id="Y0p-dG-V4H"/>
                                     <constraint firstItem="08z-XP-Cfn" firstAttribute="centerX" secondItem="wfC-5k-Aiq" secondAttribute="centerX" id="YEp-TO-ilK"/>
                                     <constraint firstItem="eVZ-Gp-qOH" firstAttribute="top" secondItem="wfC-5k-Aiq" secondAttribute="top" id="ZLk-Tb-sUW"/>
+                                    <constraint firstItem="eVZ-Gp-qOH" firstAttribute="width" secondItem="wfC-5k-Aiq" secondAttribute="width" id="koN-BB-mTq"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="koN-BB-mTq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="koN-BB-mTq"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud_small" translatesAutoresizingMaskIntoConstraints="NO" id="Q0a-Hg-i4P">
                                 <rect key="frame" x="150" y="20" width="300" height="197"/>
