@@ -24,8 +24,35 @@ let rhso = co - lhso
 
 
 //: - experiment: Rewrite the code so that it makes sense without needing a post-it note. Use meaningful names and comments.
+//Number of orage pallets
+let orangePallets = 14
 
+//Number of watermelon pallets
+let watermelonPallets = 3
 
+//Orange weight
+let orangeWeight = 100
+
+//Watermelon weight
+let watermelonWeight = 200
+
+//Total orange weight
+let totalOrange = orangePallets * orangeWeight
+
+//Total watermelon weight
+let totalWatermelon = watermelonPallets * watermelonWeight
+
+//Total combined weight
+let totalWeight = totalOrange + totalWatermelon
+
+//Weight for each side
+let eachSide = totalWeight / 2
+
+//Left side orange pallets
+let leftSide = eachSide / orangeWeight
+
+//Right side pallets
+let rightSide = orangePallets - leftSide
 
 
 
