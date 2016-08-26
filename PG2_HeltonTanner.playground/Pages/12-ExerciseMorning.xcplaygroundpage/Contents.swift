@@ -7,9 +7,14 @@
  */
 let brushTeeth = 3
 // Add more here...
+let getUp = 2
+let shower = 5
+let getComputer = 7
+let takeIpad = 3
+let eatBreakfast = 9
 
 //: - experiment: Find the sum total of all the activities by adding up all the constants; try to adjust the values or add more activities until the total time looks reasonably close to the actual amount of time you spend getting ready on an average day.
-
+let total = brushTeeth + getUp + shower + getComputer + takeIpad + eatBreakfast
 
 
 //: - experiment: Add up the constants again, but this time in separate groups: one group for things you have to do, another group for things you like to do.\
@@ -17,7 +22,8 @@ let brushTeeth = 3
 //:And if there’s a third group, things that you don’t need but you don’t really like either, then go ahead and sum that one, too!.\
 //:\
 //:Make a new constant for each group.
-
+let needed = brushTeeth + getUp + getComputer + takeIpad
+let optional = shower + eatBreakfast
 
 
 /*:
