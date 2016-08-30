@@ -22,7 +22,6 @@ let es = ttl / 2
 let lhso = es / ow
 let rhso = co - lhso
 
-
 //: - experiment: Rewrite the code so that it makes sense without needing a post-it note. Use meaningful names and comments.
 //Number of orage pallets
 let orangePallets = 14
