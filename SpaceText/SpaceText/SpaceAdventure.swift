@@ -11,9 +11,6 @@ import Foundation
 class SpaceAdventure {
     
     init() {
-        for (var i = 0; i < 11; i++) {
-            print(i)
-        }
         let mercury = Planet(name: "mercury", description: "A hot planet, closest to the sun.")
         let earth = Planet(name: "earth", description: "We live here.")
         let jupiter = Planet(name: "jupiter", description: "A large planet.")
