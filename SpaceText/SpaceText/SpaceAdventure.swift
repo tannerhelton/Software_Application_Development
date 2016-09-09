@@ -9,30 +9,31 @@
 import Foundation
 
 class SpaceAdventure {
-    
-    init() {
-        let mercury = Planet(name: "Mercury", description: "A hot planet, closest to the sun.")
-        let earth = Planet(name: "Earth", description: "We live here.")
-        let jupiter = Planet(name: "Jupiter", description: "A large planet.")
-        let mars = Planet(name: "Mars", description: "A home to martians.")
-        let venus = Planet(name: "Venus", description: "An orange planet.")
-        let uranus = Planet(name: "Uranus", description: "A blue planet.")
-        let neptune = Planet(name: "Neptune", description: "A cold planet, furthest from the sun.")
-        let saturn = Planet(name: "Saturn", description: "A planet with rings.")
+    let planetarySystem: PlanetarySystem
+    init(planetarySystem: PlanetarySystem) {
+        self.planetarySystem = planetarySystem
         
-        planetarySystem.planets.append(mercury)
-        planetarySystem.planets.append(earth)
-        planetarySystem.planets.append(jupiter)
-        planetarySystem.planets.append(mars)
-        planetarySystem.planets.append(venus)
-        planetarySystem.planets.append(uranus)
-        planetarySystem.planets.append(neptune)
-        planetarySystem.planets.append(saturn)
+//        let mercury = Planet(name: "Mercury", description: "A hot planet, closest to the sun.")
+//        let earth = Planet(name: "Earth", description: "We live here.")
+//        let jupiter = Planet(name: "Jupiter", description: "A large planet.")
+//        let mars = Planet(name: "Mars", description: "A home to martians.")
+//        let venus = Planet(name: "Venus", description: "An orange planet.")
+//        let uranus = Planet(name: "Uranus", description: "A blue planet.")
+//        let neptune = Planet(name: "Neptune", description: "A cold planet, furthest from the sun.")
+//        let saturn = Planet(name: "Saturn", description: "A planet with rings.")
         
-        //TODO reduce repetitive code.
+//        planetarySystem.planets.append(mercury)
+//        planetarySystem.planets.append(earth)
+//        planetarySystem.planets.append(jupiter)
+//        planetarySystem.planets.append(mars)
+//        planetarySystem.planets.append(venus)
+//        planetarySystem.planets.append(uranus)
+//        planetarySystem.planets.append(neptune)
+//        planetarySystem.planets.append(saturn)
+        
     }
     
-    let planetarySystem = PlanetarySystem(name: "Solar System", planets: [Planet]())
+//    let planetarySystem = PlanetarySystem(name: "Solar System", planets: [Planet]())
     
     private func displayInformation() {
         let diameterOfEarth: Float = 24859.82 //in miles pole to pole
@@ -63,12 +64,23 @@ class SpaceAdventure {
     }
     
     private func visit(planetName: String) {
-        print("Traveling to \(planetName)...")
+        var noPlan = 0
         for planet in planetarySystem.planets {
             if planetName == planet.name {
+                print("Traveling to \(planetName)...")
                 print("Arrived at \(planet.name). \(planet.description)")
+            } else {
+                for planet in planetarySystem.planets {
+                    if planetName != planet.name {
+                        noPlan++
+                    }
+                    if noPlan == planetarySystem.planets.count {
+                        print("There was no planet with the name \(planetName)")
+                    }
+                }
             }
         }
+        noPlan = 0
     }
     
     private func determineDestination() {
@@ -87,7 +99,7 @@ class SpaceAdventure {
             } else if (decision == "Cookies!") {
                 print("Cookies! Is not a valid response. Please respond with Y for yes or N for no")
             } else {
-                print("Sokkjklmnbnmkl;/rry I didn't get that")
+                print("I didn't get that")
             }
         }
     }
