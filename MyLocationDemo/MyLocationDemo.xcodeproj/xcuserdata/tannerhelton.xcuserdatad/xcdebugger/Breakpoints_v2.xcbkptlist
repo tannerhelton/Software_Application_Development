@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyLocationDemo/ViewController.swift"
+            timestampString = "495486896.069797"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLocationDemo.ViewController.locationManager.setter : Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.CLLocationManager&gt;"
+                  moduleName = "MyLocationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tannerhelton/Git/Software_Application_Development/MyLocationDemo/MyLocationDemo/ViewController.swift"
+                  timestampString = "495486884.556929"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLocationDemo.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; MyLocationDemo.ViewController"
+                  moduleName = "MyLocationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tannerhelton/Git/Software_Application_Development/MyLocationDemo/MyLocationDemo/ViewController.swift"
+                  timestampString = "495486884.55708"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyLocationDemo.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;MyLocationDemo.ViewController&gt;"
+                  moduleName = "MyLocationDemo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tannerhelton/Git/Software_Application_Development/MyLocationDemo/MyLocationDemo/ViewController.swift"
+                  timestampString = "495486884.557235"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "85">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
