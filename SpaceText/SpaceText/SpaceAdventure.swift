@@ -35,7 +35,7 @@ class SpaceAdventure {
     
 //    let planetarySystem = PlanetarySystem(name: "Solar System", planets: [Planet]())
     
-    private func displayInformation() {
+    fileprivate func displayInformation() {
         let diameterOfEarth: Float = 24859.82 //in miles pole to pole
     
         print("Welcome to the \(planetarySystem.name)!")
@@ -52,18 +52,18 @@ class SpaceAdventure {
         }
     }
     
-    private func responseToPrompt(prompt: String) -> String {
+    fileprivate func responseToPrompt(_ prompt: String) -> String {
         print(prompt)
         return getln()
     }
     
-    private func greetAdventurer() {
+    fileprivate func greetAdventurer() {
         let name = responseToPrompt("What is your name?")
         
         print("Nice to meet you \(name). My name is Eliza, I'm a old friend of Siri.")
     }
     
-    private func visit(planetName: String) {
+    fileprivate func visit(_ planetName: String) {
         var noPlan = 0
         for planet in planetarySystem.planets {
             if planetName == planet.name {
@@ -72,7 +72,7 @@ class SpaceAdventure {
             } else {
                 for planet in planetarySystem.planets {
                     if planetName != planet.name {
-                        noPlan++
+                        noPlan += 1
                     }
                     if noPlan == planetarySystem.planets.count {
                         print("There was no planet with the name \(planetName)")
@@ -83,7 +83,7 @@ class SpaceAdventure {
         noPlan = 0
     }
     
-    private func determineDestination() {
+    fileprivate func determineDestination() {
         var decision = ""
         while !(decision == "Y" || decision == "N" || decision == "Cookies!") {
             decision = responseToPrompt("Shall I randomly choose a planet for you to visit? (Y or N)")

@@ -107,6 +107,7 @@
 				TargetAttributes = {
 					F9A13B891ADDD6990057A316 = {
 						CreatedOnToolsVersion = 6.3;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -226,6 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = SpaceText;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -233,6 +235,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = SpaceText;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
