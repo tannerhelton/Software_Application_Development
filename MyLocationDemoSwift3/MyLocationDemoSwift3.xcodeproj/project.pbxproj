@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F59697811D94363E001F8459 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F59697801D94363E001F8459 /* CoreLocation.framework */; };
 		F5DFEF711D8C763F0027FBE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFEF701D8C763F0027FBE2 /* AppDelegate.swift */; };
 		F5DFEF731D8C763F0027FBE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DFEF721D8C763F0027FBE2 /* ViewController.swift */; };
 		F5DFEF761D8C763F0027FBE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DFEF741D8C763F0027FBE2 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F59697801D94363E001F8459 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F5DFEF6D1D8C763F0027FBE2 /* MyLocationDemoSwift3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationDemoSwift3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DFEF701D8C763F0027FBE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5DFEF721D8C763F0027FBE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F59697811D94363E001F8459 /* CoreLocation.framework in Frameworks */,
 				F5DFEF841D8C765D0027FBE2 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,6 +74,7 @@
 		F5DFEF821D8C765D0027FBE2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F59697801D94363E001F8459 /* CoreLocation.framework */,
 				F5DFEF831D8C765D0027FBE2 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -317,6 +321,7 @@
 				F5DFEF811D8C763F0027FBE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
