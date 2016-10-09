@@ -40,6 +40,6 @@ $(document).ready(function() {
     });
 
     socket.on('message', function(data) {
-        $('#log').appened('<div><strong>' + data.user + ': ' + data.message + '</strong></div>');
+        $('#log').append('<div><strong>' + data.user + ': ' + data.message + '</strong></div>');
     });
 });

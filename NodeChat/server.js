@@ -39,7 +39,7 @@ io.sockets.on('connection', function(socket) {
 	socket.on('message', function(data) {
 		io.sockets.emit('message', {
 			user: socket.user,
-			message : data
+			message: data
 		});
 	});
 });
