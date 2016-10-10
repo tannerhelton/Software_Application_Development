@@ -1,0 +1,25 @@
+body {
+	background-image: url(bg.png);
+	background-position: top;
+	background-repeat: repeat-x;
+	background-size: auto;
+}
+#content {
+	margin: auto;
+	width: 75%;
+	font-family: 'Open Sans', sans-serif;
+	color:#FFFFFF;
+}
+.msgLog {
+	font-size:25px;
+}
+#log {
+	border: solid white 1px;
+	margin: auto;
+	font-family: 'Open Sans', sans-serif;
+	color:#FFFFFF;
+}
+
+#controls {
+	display: none;
+}
