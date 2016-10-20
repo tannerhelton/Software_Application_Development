@@ -3,6 +3,7 @@ body {
 	background-position: top;
 	background-repeat: repeat-x;
 	background-size: auto;
+	background-color:#000000;
 }
 #content {
 	margin: auto;
