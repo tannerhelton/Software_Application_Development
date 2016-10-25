@@ -26,7 +26,7 @@ class SecondViewController: UIViewController {
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let reciever = segue.destination as! ThirdViewController
-        reciever.msg = lblMessage.text
+        let reciever2 = segue.destination as! ThirdViewController
+        reciever2.msg2 = lblMessage.text
     }
 }

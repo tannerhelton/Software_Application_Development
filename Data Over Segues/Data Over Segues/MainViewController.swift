@@ -9,10 +9,14 @@
 import UIKit
 
 class MainViewController: UIViewController {
+    
+    var msg3: String?
+    
     @IBOutlet weak var txtMessage: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtMessage.text = msg3
         // Do any additional setup after loading the view, typically from a nib.
     }
 
