@@ -1,7 +1,7 @@
 // Rectangle width
-float rectW = 80;
+float rectW = 50;
 // Rectangle height
-float rectH = 20;
+float rectH = 50;
 // Don't edit this it is for the 5 pixel border
 float bufferW = .5 * rectW + 5;
 float bufferH = .5 * rectH + 5;
@@ -11,6 +11,8 @@ float rectY = bufferH;
 boolean clockwise = true;
 // Starting color is set to random
 color fillColor = color(random(255), random(255), random(255));
+// This is the speed at which the box should move
+int speed = 5;
 void setup() {
   // Size of the canvas
   size(400, 400);
@@ -33,13 +35,13 @@ void draw() {
 // Function to move clockwise
 void moveClockwise() {
   if (rectX < width - bufferW && rectY == bufferH) {
-    rectX += 5;
+    rectX += speed;
   } else if (rectY < height - bufferH && rectX == width - bufferW) {
-    rectY += 5;
+    rectY += speed;
   } else if (rectX > bufferW && rectY == height - bufferH) {
-    rectX -= 5;
+    rectX -= speed;
   } else if (rectY > bufferH && rectX == bufferW) {
-    rectY -= 5;
+    rectY -= speed;
   }
 }
 // Function to move counter-clockwise
