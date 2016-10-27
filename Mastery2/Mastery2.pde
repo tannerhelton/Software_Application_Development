@@ -10,7 +10,7 @@ float rectY = bufferH;
 // Don't edit this it establishes a starting direction
 boolean clockwise = true;
 // Starting color is set to random
-color fillColor = color(255,0,0);
+color fillColor = color(255, 0, 0);
 // This is the speed at which the box should move
 int speed = 5;
 void setup() {
@@ -57,11 +57,13 @@ void moveCounterClockwise() {
   }
 }
 // Change colors and go other direction on mouse press
-void mousePressed() {
-  clockwise = !clockwise;
-  if (fillColor == color(0, 255, 0)) {
-    fillColor = color(255, 0, 0);
-  } else {
-    fillColor = color(0, 255, 0);
+void keyPressed() {
+  if (key == 'g' || key == 'G') {
+    clockwise = !clockwise;
+    if (fillColor == color(0, 255, 0)) {
+      fillColor = color(255, 0, 0);
+    } else {
+      fillColor = color(0, 255, 0);
+    }
   }
 }
