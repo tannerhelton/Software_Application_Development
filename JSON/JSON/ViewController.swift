@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         
         let task = URLSession.shared.dataTask(with: url!) { data, response, error in
             guard error == nil else {
-                print(error)
+                print(error!)
                 return
             }
             
@@ -78,6 +78,8 @@ class ViewController: UIViewController {
             peopleIndex -= 1
         }
         print(peopleIndex)
+        let sheet = "https://spreadsheets.google.com/feeds/list/1j2X7bbm8_BIBfDXSEM0fghHdDamHw9DrMEtZbiYIZBs/od6/public/values?alt=json"
+        getSheet(url: sheet)
         uiPump()
     }
     
@@ -88,6 +90,8 @@ class ViewController: UIViewController {
             peopleIndex += 1
         }
         print(peopleIndex)
+        let sheet = "https://spreadsheets.google.com/feeds/list/1j2X7bbm8_BIBfDXSEM0fghHdDamHw9DrMEtZbiYIZBs/od6/public/values?alt=json"
+        getSheet(url: sheet)
         uiPump()
     }
 }
