@@ -56,7 +56,7 @@ GROUP BY last_name;
 --7) Group all rentals by the first letter of every customer's last name. Calculate total payments, total number of rentals, and average pay per rental by last name letters. Sort descending on total payments.
 
 SELECT
-  c.last_name,
+  LEFT(c.last_name, 1) AS "last_names",
   SUM(p.amount) AS "total_payments",
   COUNT(r.rental_id) AS "num_rentals",
   SUM(p.amount) / COUNT(p.rental_id) AS "avg_pay"
@@ -65,14 +65,26 @@ FROM
 JOIN
   payment p ON p.customer_id = c.customer_id
 JOIN
-  rental r
-WHERE
-  c.last_name
+  rental r ON r.rental_id = p.rental_id
 GROUP BY
-  last_name
+  LEFT(c.last_name, 1)
+ORDER BY
+  SUM(p.amount) DESC;
+
+--8) List all the actors in the film "Sunset Racer"
 
 
 
+--9) Show total sales by store.
 
-  --FInish 7
-
+SELECT
+  store.store_id,
+  SUM(payment.amount) AS "total_sales"
+FROM
+  store
+JOIN
+  staff ON store.store_id = staff.store_id
+JOIN
+  payment ON staff.staff_id = payment.staff_id
+GROUP BY
+  store.store_id;
