@@ -53,4 +53,26 @@ JOIN payment p ON p.customer_id = c.customer_id
 WHERE c.last_name LIKE "T%"
 GROUP BY last_name;
 
---7) 
+--7) Group all rentals by the first letter of every customer's last name. Calculate total payments, total number of rentals, and average pay per rental by last name letters. Sort descending on total payments.
+
+SELECT
+  c.last_name,
+  SUM(p.amount) AS "total_payments",
+  COUNT(r.rental_id) AS "num_rentals",
+  SUM(p.amount) / COUNT(p.rental_id) AS "avg_pay"
+FROM
+  customer c
+JOIN
+  payment p ON p.customer_id = c.customer_id
+JOIN
+  rental r
+WHERE
+  c.last_name
+GROUP BY
+  last_name
+
+
+
+
+  --FInish 7
+
