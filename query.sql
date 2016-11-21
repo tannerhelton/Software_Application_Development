@@ -73,7 +73,17 @@ ORDER BY
 
 --8) List all the actors in the film "Sunset Racer"
 
-
+SELECT
+  actor.first_name,
+  actor.last_name
+FROM
+  actor
+JOIN
+  film_actor ON film_actor.actor_id = actor.actor_id
+JOIN
+  film ON film.film_id = film_actor.film_id
+WHERE
+  film.title = "SUNSET RACER";
 
 --9) Show total sales by store.
 
