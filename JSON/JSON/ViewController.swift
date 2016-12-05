@@ -34,11 +34,10 @@ class ViewController: UIViewController {
                 return
             }
             
-            let json =
-                try! JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, AnyObject>
+            let json = try! JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, AnyObject>
             
             //callback(json)
-            self.people = json["feed"]!["entry"] as! NSArray
+            self.people = json["0"] as! NSArray
             self.uiPump()
         }
         
@@ -47,27 +46,27 @@ class ViewController: UIViewController {
     
     func uiPump() {
         let person = people[peopleIndex] as! Dictionary<String, AnyObject>
-        let fname = person["gsx$firstname"]!["$t"]!
-        let lname = person["gsx$lastname"]!["$t"]!
-        let email = person["gsx$email"]!["$t"]!
-        let age = person["gsx$age"]!["$t"]!
-        let ram = person["gsx$ram"]!["$t"]!
-        let cores = person["gsx$cores"]!["$t"]!
+        let fname = person["FirstName"]
+//        let lname = person["gsx$lastname"]!["$t"]!
+//        let email = person["gsx$email"]!["$t"]!
+//        let age = person["gsx$age"]!["$t"]!
+//        let ram = person["gsx$ram"]!["$t"]!
+//        let cores = person["gsx$cores"]!["$t"]!
         
         // instantly update the UI
         DispatchQueue.main.async(execute: {
-            self.firstname.text = "First Name: \(fname!)"
-            self.lastname.text = "Last Name: \(lname!)"
-            self.email.text = "Email: \(email!)"
-            self.age.text = "Age: \(age!)"
-            self.ram.text = "RAM (GB): \(ram!)"
-            self.cores.text = "Cores: \(cores!)"
+            self.firstname.text = "First Name: \(fname)"
+//            self.lastname.text = "Last Name: \(lname!)"
+//            self.email.text = "Email: \(email!)"
+//            self.age.text = "Age: \(age!)"
+//            self.ram.text = "RAM (GB): \(ram!)"
+//            self.cores.text = "Cores: \(cores!)"
         })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let sheet = "https://spreadsheets.google.com/feeds/list/1j2X7bbm8_BIBfDXSEM0fghHdDamHw9DrMEtZbiYIZBs/od6/public/values?alt=json"
+        let sheet = "http://10.10.96.119/index.php"
         getSheet(url: sheet)
     }
     
@@ -78,7 +77,7 @@ class ViewController: UIViewController {
             peopleIndex -= 1
         }
         print(peopleIndex)
-        let sheet = "https://spreadsheets.google.com/feeds/list/1j2X7bbm8_BIBfDXSEM0fghHdDamHw9DrMEtZbiYIZBs/od6/public/values?alt=json"
+        let sheet = "http://10.10.96.119/index.php"
         getSheet(url: sheet)
         uiPump()
     }
@@ -90,7 +89,7 @@ class ViewController: UIViewController {
             peopleIndex += 1
         }
         print(peopleIndex)
-        let sheet = "https://spreadsheets.google.com/feeds/list/1j2X7bbm8_BIBfDXSEM0fghHdDamHw9DrMEtZbiYIZBs/od6/public/values?alt=json"
+        let sheet = "http://10.10.96.119/index.php"
         getSheet(url: sheet)
         uiPump()
     }
